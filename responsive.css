@@ -1,0 +1,47 @@
+/* Default mobile layout (single column) */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: block;
+    width: 100%;
+}
+
+.box {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 100%; /* Divs take full width in mobile view */
+}
+
+/* Media query for tablet view (query #1 at 772px) */
+@media screen and (min-width: 772px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Spread out the divs */
+    }
+
+    .box {
+        width: 45vw; /* 45% of viewport width for divs */
+        max-height: 30vh; /* Images max height is 30% of viewport height */
+    }
+}
+
+/* Media query for large screen view (query #2 at 998px) */
+@media screen and (min-width: 998px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Spread divs out more */
+    }
+
+    .box {
+        width: 30vw; /* 30% of viewport width for divs */
+    }
+}
